@@ -1,6 +1,7 @@
 # Ignora gli eseguibili
 *.out
 a.out
+test.out
 
 # Ignora i file di compilazione di C
 *.o
