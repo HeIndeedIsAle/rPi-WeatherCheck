@@ -106,6 +106,10 @@ void readValues(struct samples *itemPtr) {
 
 int main (int argc, char* argv[]) {
 
+//const char *writeTkn = readJson("API_WRITE_KEY");
+//const char *deviceId = readJson("API_DEVICE_ID");
+//const char *readTkn = readJson("API_READ_ID");
+
 	if (argc != 3) {
 		printf("\nERRORE! | Non sono stati correttamente inseriti i parametri\n");
 		return(0);
