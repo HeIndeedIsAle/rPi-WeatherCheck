@@ -22,6 +22,9 @@ through command line.
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
+#include "./JSON/json_loader.h" //permette di leggere i JSON semplici
+// per usare json_loader, la funzione e' readjson("nomechiave")
+// quando si compila questo file, usare cc meteo_sensor_main.c ./JSON/json_loader.c -lwiringPi
 
 int fd;					//made it global so i can use it in every function
 uint8_t elements = 0;			//made it global so i can use it in every function
@@ -131,7 +134,7 @@ struct samples *samplesMainPtr;
 samplesMainPtr = malloc(sizeof(*samplesMainPtr) * elements);
 struct samples *samplesStartPtr;
 samplesStartPtr = samplesMainPtr;		//i have a pointer that is static to the start of the structure
-	
+
 time_t samplingStartingTime;
 samplingStartingTime = time(NULL);
 uint8_t doubleCheck = 0;
